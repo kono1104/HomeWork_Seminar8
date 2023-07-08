@@ -13,17 +13,12 @@ int columns = ReadInt("Введите количество столбцов: ");
 int[,] array = new int[rows, columns];
 int[,] secondArray = new int[rows, columns];
 int[,] resultArray = new int[rows, columns];
-
 FillArrayRandom(array);
 PrintArray2D(array);
-
 Console.WriteLine();
-
 FillArrayRandom(secondArray);
 PrintArray2D(secondArray);
-
 Console.WriteLine();
-
 if (array.GetLength(0) != secondArray.GetLength(1))
 {
     Console.WriteLine(" Нельзя перемножить ");
@@ -40,18 +35,13 @@ for (int i = 0; i < array.GetLength(0); i++)
         }
     }
 }
-
 PrintArray2D(resultArray);
-
-
-
 // Функция ввода
 int ReadInt(string message)
 {
     Console.Write(message);
     return Convert.ToInt32(Console.ReadLine());
 }
-
 // Функция заполнения массива рандомными числами от 1 до 9
 void FillArrayRandom(int[,] array)
 {
@@ -63,7 +53,6 @@ void FillArrayRandom(int[,] array)
         }
     }
 }
-
 // Функция вывода двумерного массива в терминал 
 void PrintArray2D(int[,] array)
 {
